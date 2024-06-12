@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const privateRouteCORS = {
   origin: (origin, callback) => {
-    if (origin === process.env.CLIENT_URL || !origin) {
+    if (origin === process.env.CLIENT_URL || origin == "https://logo-frontend.vercel.app" || !origin) {
       console.log("origin ===>", origin);
       callback(null, true);
     } else {
